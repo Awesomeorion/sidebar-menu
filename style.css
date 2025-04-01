@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: rgb(70, 157, 250);
+  --text-color: #fff;
+  --other-color: #000;
+  --light-color: rgba(255, 255, 255, 0.7);
+  --lighter-color: rgba(255, 255, 255, 0.3);
+  --dark-color: rgb(60,60,60);
+  --bg-color: rgb(45,45,45);
+}
+.dark {
+  --primary: rgb(70, 157, 250);
+  --text-color: #000;
+  --other-color: #fff;
+  --light-color: rgba(0, 0, 0, 0.7);
+  --lighter-color: rgba(0, 0, 0, 0.1);
+  --dark-color: rgba(255, 255, 255);
+  --bg-color: rgb(245,245,245);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+body {
+  overflow-x: hidden;
+  background: #ccc;
+}
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100svh;
+  overflow-y: auto;
+  width: 250px;
+  max-width: 250px;
+  padding: 15px 5px;
+  background: var(--other-color);
+  transition: 0.3s;
+  border-right:1px solid var(--lighter-color);
+}
+nav::-webkit-scrollbar {
+  display: none;
+}
+.main-links,
+.general-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  transition: 0.3s;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--light-color);
+  font-weight: 450;
+  width: 85%;
+  padding: 10px 15px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+nav a.active,
+nav a:hover {
+  background: var(--lighter-color);
+  color: var(--text-color);
+}
+nav a div.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 -5px;
+  color:var(--primary);
+}
+nav a span {
+  margin-left: 15px;
+}
+nav div.divider {
+  width: 100%;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-left: 25px;
+}
+.logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin: -5px 10px 10px 10px;
+}
+nav div.logo img {
+  width: 50px;
+}
+nav div.logo .text {
+  color: var(--text-color);
+  margin: 0 10px;
+}
+nav div.logo .text h3 {
+  color: inherit;
+}
+div.topnav .topnav-links {
+  display:flex;
+}
+div.topnav .sidebar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: none;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  color: var(--text-color);
+}
+div.topnav .sidebar-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 10px;
+  height: 10px;
+  font-size:17px;
+}
+div.topnav .sidebar-btn:hover {
+  background: var(--lighter-color);
+}
+div.topnav {
+  position: fixed;
+  z-index:100;
+  top:0;
+  left:250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width:calc(100vw - 250px);
+  padding: 15px 30px;
+  background: var(--other-color);
+  transition: 0.3s;
+  color:var(--text-color);
+  border-bottom:1px solid var(--lighter-color);
+}
+.search-container{
+  postion:relative;
+}
+.search-bar {
+    padding: 8px; /* Padding inside the search bar */
+    border: 1px solid var(--text-color); /* Remove border */
+    border-radius: 4px 0 0 4px; /* Rounded corners */
+    width: 275px; /* Set width */
+    padding-left:35px;
+}
+.search-bar:hover {
+    border: 1px solid var(--primary);
+    outline: none;
+}
+.search-container i {
+  position:relative;
+  left:30px;
+  top:1px;
+  color:var(--primary);
+}
+
+.search-button {
+    padding: 8px 12px;
+    background-color: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition:0.2s;
+}
+
+.search-button:hover {
+    background-color: rgb(25, 120, 204);
+    border-color:rgb(25, 120, 204);
+}
