@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script
+      src="https://kit.fontawesome.com/0d2e8c3450.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="logo">
+        <img
+          src="https://cdn.glitch.global/637bb3cf-7490-4d6f-89c7-7fed44988890/logo3.png?v=1743464492341"
+        />
+        <div class="sidebar-text text">
+          <h3>AwesomeOrion</h3>
+
+        </div>
+      </div>
+      <div class="main-links">
+        <div class="divider sidebar-text">Main Menu</div>
+        <a href="#">
+          <div class="icon">
+            <i class="fa-solid fa-qrcode"></i>
+          </div>
+          <span class="sidebar-text">Dashboard</span>
+        </a>
+        <a href="#">
+          <div class="icon">
+            <i class="fa-solid fa-link"></i>
+          </div>
+          <span class="sidebar-text">Shortcuts</span>
+        </a>
+      </div>
+      <div class="general-links">
+        <div class="divider sidebar-text">General</div>
+        <a href="#">
+          <div class="icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <span class="sidebar-text">Groups</span>
+        </a>
+        <a href="#">
+          <div class="icon">
+            <i class="fa-solid fa-folder"></i>
+          </div>
+          <span class="sidebar-text">Projects</span>
+        </a>
+        <a href="#">
+          <div class="icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <span class="sidebar-text">TODO</span>
+        </a>
+        <a href="#">
+          <div class="icon">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <span class="sidebar-text">Tools</span>
+        </a>
+      </div>
+    </nav>
+    <div class="topnav">
+      <h1>Dashboard</h1>
+      <div class="search-container">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" placeholder="Search..." class="search-bar">
+        <button type="submit" class="search-button">Search</button>
+      </div>
+      <div class="topnav-links">
+        <button class="sidebar-btn">
+          <i class="fa-solid fa-bell"></i>
+        </button>
+        <button class="sidebar-btn" id="theme">
+          <i id="btnI" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+    
+    <script type="module">
+  const root = document.querySelector(":root");
+  const theme = document.getElementById("theme");
+  
+  const changeTheme = () => {
+    root.classList.toggle("dark");
+  };
+  
+  theme.addEventListener("click", changeTheme);
+</script>
+  </body>
+</html>
